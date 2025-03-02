@@ -102,7 +102,7 @@ def create_side_by_side(image, depth, grayscale):
         return np.concatenate((image, right_side), axis=1)
 
 
-def run(input_path, output_path, model_path, model_type="dpt_beit_large_512", optimize=False, side=False, height=None,
+def run(input_path, output_path, model_path, model_type="dpt_hybrid_384", optimize=False, side=False, height=None,
         square=False, grayscale=False):
     """Run MonoDepthNN to compute depth maps.
 
@@ -225,7 +225,7 @@ if __name__ == "__main__":
                         )
 
     parser.add_argument('-t', '--model_type',
-                        default='dpt_beit_large_512',
+                        default='dpt_hybrid_384',
                         help='Model type: '
                              'dpt_beit_large_512, dpt_beit_large_384, dpt_beit_base_384, dpt_swin2_large_384, '
                              'dpt_swin2_base_384, dpt_swin2_tiny_256, dpt_swin_large_384, dpt_next_vit_large_384, '
